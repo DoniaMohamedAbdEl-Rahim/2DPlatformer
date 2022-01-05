@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// This class handles displayig the score
@@ -10,7 +11,7 @@ public class ScoreDisplay : UIelement
 {
     [Header("References")]
     [Tooltip("The text to use when displaying the score")]
-    public Text displayText = null;
+    public TMP_Text displayText = null;
 
     /// <summary>
     /// Description:

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,23 +53,26 @@
     <UnityVersion>2020.3.11f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\PopulateRuleOverrideTileWizard.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabRandomBrush\PrefabRandomBrush.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\BasePrefabBrush.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\RuleOverrideTileEditor.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrush\TintBrush.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\IsometricRuleTile\IsometricRuleTileEditor.cs" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\CoordinateBrush\CoordinateBrush.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\GameObjectBrush\GameObjectBrush.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\HexagonalRuleTile\HexagonalRuleTileEditor.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabBrush\PrefabBrush.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\AdvancedRuleOverrideTileEditor.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\RandomBrush\RandomBrush.cs" />
     <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\CustomRuleTileMenu.cs" />
-    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrushSmooth\TintBrushSmooth.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabRandomBrush\PrefabRandomBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\GameObjectBrush\GameObjectBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabBrush\PrefabBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\RandomBrush\RandomBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\PopulateRuleOverrideTileWizard.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\RuleOverrideTileEditor.cs" />
     <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\GroupBrush\GroupBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrushSmooth\TintBrushSmooth.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\BasePrefabBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrush\TintBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\HexagonalRuleTile\HexagonalRuleTileEditor.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\AdvancedRuleOverrideTileEditor.cs" />
     <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Brushes\LineBrush\LineBrush.cs" />
+    <Compile Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\IsometricRuleTile\IsometricRuleTileEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TileMapping\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
@@ -675,6 +678,9 @@
     </Reference>
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>D:\UnityVersions\2020.3.11f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>

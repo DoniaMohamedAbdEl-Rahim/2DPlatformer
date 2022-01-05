@@ -8,6 +8,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    bool triggered = false;
+    [SerializeField]
+    GameObject gravityTxt;
     #region Variables
     #region GameObject references
     [Header("Game Object and Component References")]
@@ -171,6 +174,7 @@ public class PlayerController : MonoBehaviour
         ProcessInput();
         HandleSpriteDirection();
         DetermineState();
+        triggered = false;
     }
     #endregion
 
@@ -231,7 +235,7 @@ public class PlayerController : MonoBehaviour
             foreach (string layerName in passThroughLayers)
             {
                 Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layerName), true);
-            } 
+            }
         }
         else
         {
@@ -453,4 +457,29 @@ public class PlayerController : MonoBehaviour
         }
     }
     #endregion
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "GravityInverter")
+        {
+            if (!triggered)
+            {
+                triggered = true;
+                Debug.Log("Apple");
+                playerRigidbody.gravityScale = -playerRigidbody.gravityScale;
+                if (playerRigidbody.gravityScale < 0)
+                {
+                    this.transform.rotation = Quaternion.Euler(new Vector3(0, -180f, 180));
+                    gravityTxt.GetComponent<GravityDisplay>().ChangeGravityMode(-1);
+                }
+                else
+                {
+                    this.transform.rotation = Quaternion.Euler(Vector3.zero);
+                    gravityTxt.GetComponent<GravityDisplay>().ChangeGravityMode(1);
+                }
+                Destroy(collision.gameObject);
+            }
+        }
+    }
 }

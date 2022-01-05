@@ -10,6 +10,8 @@ using UnityEngine;
 /// </summary>
 public class Health : MonoBehaviour
 {
+    [SerializeField]
+    GameObject gravityTxt;
     [Header("Team Settings")]
     [Tooltip("The team associated with this damage")]
     public int teamId = 0;
@@ -132,6 +134,9 @@ public class Health : MonoBehaviour
     /// </summary>
     void Respawn()
     {
+        gravityTxt.GetComponent<GravityDisplay>().ChangeGravityMode(1);
+        this.transform.gameObject.GetComponent<Rigidbody2D>().gravityScale = 2;
+        this.transform.rotation = Quaternion.Euler(Vector3.zero);
         transform.position = respawnPosition;
         currentHealth = defaultHealth;
         GameManager.UpdateUIElements();

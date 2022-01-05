@@ -68,6 +68,7 @@ public class LivesDisplay : UIelement
                 Instantiate(livesDisplayImage, transform);
                 GameObject createdNumberDisp = Instantiate(numberDisplay, transform);
                 createdNumberDisp.GetComponent<Text>().text = number.ToString();
+                createdNumberDisp.GetComponent<Text>().color = Color.white;
             }
         }
     }
